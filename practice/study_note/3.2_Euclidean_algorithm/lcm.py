@@ -13,7 +13,7 @@ def GCD(A, B):
     return B
 
 
-lcm = A[0] * A[1] // GCD(A[0], A[1])
+lcm = A[0]
 
 for i in range(1, len(A)):
     lcm = lcm * A[i] // GCD(lcm, A[i])
