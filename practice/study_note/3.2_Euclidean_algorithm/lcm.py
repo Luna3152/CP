@@ -1,0 +1,21 @@
+A = [int(x) for x in input().split()]
+
+
+def GCD(A, B):
+    while A >= 1 and B >= 1:
+        if A < B:
+            B = B % A
+        else:
+            A = A % B
+
+    if A >= 1:
+        return A
+    return B
+
+
+lcm = A[0] * A[1] // GCD(A[0], A[1])
+
+for i in range(1, len(A)):
+    lcm = lcm * A[i] // GCD(lcm, A[i])
+
+print(lcm)
