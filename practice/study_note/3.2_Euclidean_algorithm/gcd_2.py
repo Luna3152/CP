@@ -1,3 +1,4 @@
+N = int(input())
 A = [int(x) for x in input().split()]
 
 
@@ -15,7 +16,7 @@ def GCD(A, B):
 
 gcd = A[0]
 
-for i in range(1,len(A)):
+for i in range(1, len(A)):
     gcd = GCD(gcd, A[i])
 
 print(gcd)

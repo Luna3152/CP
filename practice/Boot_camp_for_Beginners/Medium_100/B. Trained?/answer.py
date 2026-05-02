@@ -2,6 +2,17 @@ n = int(input())
 a = []
 
 for i in range(n):
-    a.append(int(input()))
+    a.append(int(input()) - 1)
 
-print(a)
+node = 0
+count = 0
+
+while not node == 1:
+    node = a[node]
+    count += 1
+
+    if count >= n:
+        count = -1
+        break
+
+print(count)
